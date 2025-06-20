@@ -2,13 +2,14 @@ import Image from "next/image"
 import InfoBox from "@/components/Info-box"
 
 export default function HomePage() {
+    const imagem = '/img/wemerson.jpg'
 
     return (
         <main>
             <article className="mt-28 grid grid-cols-2">
                 <section className="text-gray-200">
-                    <h1 className="mb-1">Olá, eu me chamo <strong>Wemerson</strong> e sou:</h1>
-                    <h1 className="text-blue-500 font-semibold text-2xl mb-1">Desenvolvedor FullStack React | Node.js</h1>
+                    <h1 className="mb-1 text-2xl font-bold"><span>&#x1F44B;</span> Olá, eu sou o Wemerson</h1>
+                    <h1 className="text-blue-500 font-semibold text-xl mb-1">Desenvolvedor Full-Stack React | Node.js</h1>
                     <p className="mb-4">Crio interfaces responsivas e modernas focado em alta performacer.</p>
                     
                     <button
@@ -37,19 +38,11 @@ export default function HomePage() {
             <section className="grid grid-cols-[614px_410px] mt-32">
                 <article className="flex flex-col justify-center gap-2 text-gray-300 text-lg">
                     <p>
-                        Sou programador focado em JavaScript com conhecimentos em React e Tailwindcss no Frontend, Node.js e Express no Backend. Na área de DataBase tenho apredndio sobre de MySQL e MongoDB.
+                        Sou um programador apaixonado por JavaScript, com experiência em React e TailwindCSS no front-end, além de Node.js e Express no back-end. Também estou me aprofundando em bancos de dados como MySQL e MongoDB.
                     </p>
 
                     <p>
-                        Estou cursando ADS (Análise e Desenvolvimento de Sistemas) com previsão de conclusão para 2027.
-                    </p>
-
-                    <p>
-                        Além de aspirante a programador também sou um grande fã de RPG de mesa - sim, eu gosto de mestrar - e sou apaixonado na minha esposa!
-                    </p>
-
-                    <p>
-                        Confira meus projetos abaixo.
+                        <span>&#x1F4DA;</span> Atualmente, curso Análise e Desenvolvimento de Sistemas (ADS) pela Anhanguera, com previsão de conclusão em 2027.
                     </p>
                 </article>
 
@@ -76,66 +69,41 @@ export default function HomePage() {
                     />
                 </section>
 
-                <section className="flex flex-col justify-center items-left">
+                <section className="flex flex-col justify-center items-left gap-2">
                     <h1 className="text-blue-500 font-semibold text-4xl mb-2">Sobre mim</h1>
                     <p>
-                        Sou um Desenvolvedor Full Stack apaixonado por tecnologia, resolução de problemas e experiências digitais bem construídas. Ao longo da minha jornada, explorei tanto o front quanto o back-end, sempre buscando unir eficiência técnica e boa usabilidade.
+                        Sou um Desenvolvedor Full Stack movido por desafios, pela tecnologia e pela vontade de criar experiências digitais que realmente funcionam — tanto no código quanto para quem usa.
+                    </p>
+                    <p>
+                        Gosto de trabalhar com soluções que combinem eficiência técnica, boa usabilidade e código limpo. Do front ao back, minha missão é entregar sistemas ágeis, bonitos e funcionais.
+                    </p>
+                    <p>
+                        Fora do teclado, sou mestre de RPG de mesa, cinéfilo, autodidata incansável — e perdidamente apaixonado pela minha esposa <span>&#x1F499;</span>
                     </p>
                 </section>
             </article>
 
-            <article className="mt-16 grid grid-cols-2 gap-4">
-                <InfoBox 
-                    tag='ADS'
-                    bio='Rio das Ostras, RJ'
-                    description='Análise e Desenvolvimento de Sistemas - Anhanguera - 01/2027'
-                    msg='Mestre de RPG de mesa, amante de cinema, autodidata e perdidamente apaixonado pela minha esposa!'
-                    redes='linkedin'
-                />
-
-                {/* <ul className="flex flex-col justify-center items-center">
-                    <li className="text-xl font-semibold">Wemerson Nunes</li>
-                    <li className="font-light">25 anos</li>
-                    <li className="font-light">Rio das Ostras, RJ</li>
-                    <li className="text-xl font-semibold mt-2">Faculdade</li>
-                    <li className="font-light">Anhangura - 01/2027</li>
-                    <li className="text-xl font-semibold mt-2">Redes Sociais</li>
-                    <li className="font-light">Linkdin</li>
-                    <li className="font-light">EMAIL</li>
-                    <li className="font-light">GIT</li>
-                </ul> */}
-
-                <Image
-                    className="rounded-2xl"
-                    src={'/img/wemerson.jpg'}
-                    alt="Foto do desenvolvedor deste site."
-                    width={614}
-                    height={500}
-                />
+            <article className="mt-16">
+                <aside className="h-[400px] bg-[url('/img/wemerson.jpg')] bg-cover bg-right-top bg-no-repeat rounded-2xl">
+                    <div className="h-full flex flex-col justify-end items-end gap-2 px-4 py-3 bg-linear-to-l from-gray-900 from-10% to-transparent to-90%">
+                        <h2 className="text-xl font-bold"><span>&#x1F30E;</span> Localização</h2>
+                        <p>Rio das Ostras, RJ</p>
+                        <h2 className="text-xl font-bold"><span>&#x1F393;</span> Formação</h2>
+                        <p>Análise e Desenvolvimento de Sistemas - Anhanguera</p>
+                        <p>Conclusão prevista: Janeiro de 2027</p>
+                    </div>
+                </aside>
             </article>
 
             <article>
-                <h1 className="text-blue-500 text-3xl font-semibold mt-32">Conhecimento</h1>
+                <h1 className="text-blue-500 text-3xl font-semibold mt-32 mb-3">Conhecimento</h1>
 
-                <div className="grid grid-cols-3 mt-8">
-                    <ul className="flex flex-col gap-2">
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>JavaScript</li>
-                        <li>Tailwindcss</li>
-                        <li>React</li>
-                    </ul>
-                    <ul className="flex flex-col gap-2">
-                        <li>Node.js</li>
-                        <li>Expres</li>
-                        <li>Restfull API</li>
-                        <li>Postgresql</li>
-                    </ul>
-                    <ul className="flex flex-col gap-2">
-                        <li>Figma</li>
-                        <li>Git</li>
-                    </ul>
-                </div>
+                <ul className="flex flex-col gap-2">
+                    <li><strong>Frontend:</strong>  HTML, CSS, JavaScript, React, TailwindCSS</li>
+                    <li><strong>Backend:</strong> Node.js, Express, APIs RESTful</li>
+                    <li><strong>Database:</strong> PostgreSQL, MySQL, MongoDB</li>
+                    <li><strong>Outros:</strong> Figma, Git</li>
+                </ul>
             </article>
         </main>
     )

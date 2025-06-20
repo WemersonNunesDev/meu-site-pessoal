@@ -8,7 +8,7 @@ export default function Projetos() {
             <article className="grid grid-cols-2">
                 <section className="flex flex-col justify-center items-left">
                     <h1 className="text-blue-500 text-3xl font-semibold mb-2">Projetos</h1>
-                    <p>Confira meus projetos logo abaixo.</p>
+                    <p>Confira meus projetos logo abaixo <span className="text-3xl">&#x1FAF0;</span></p>
                 </section>
 
                 <section>
